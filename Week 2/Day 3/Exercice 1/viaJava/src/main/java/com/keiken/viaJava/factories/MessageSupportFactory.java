@@ -1,4 +1,4 @@
-package com.keiken.viaJava;
+package com.keiken.viaJava.factories;
 
 import com.keiken.viaJava.providers.MessageProvider;
 import com.keiken.viaJava.renderers.MessageRenderer;
@@ -14,8 +14,7 @@ public class MessageSupportFactory {
     private MessageSupportFactory() {
         props = new Properties();
         try {
-            InputStream resourceAsStream = this.getClass().getResourceAsStream("msf.properties");
-            props.load(resourceAsStream);
+            props.load(this.getClass().getResourceAsStream("/msf.properties"));
             String rendererClass = props.getProperty("renderer.class");
             String providerClass = props.getProperty("provider.class");
             renderer = (MessageRenderer) Class.forName(rendererClass).newInstance();
