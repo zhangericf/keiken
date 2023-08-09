@@ -3,10 +3,11 @@ package com.keiken.discoverspringaop.services;
 import com.keiken.discoverspringaop.annotation.TimeIt;
 import org.springframework.stereotype.Service;
 
-public class TimeItService {
+@Service
+public class TimerService {
     @TimeIt
     public void waitSeconds(long seconds) {
-        System.out.println("Waiting for " + seconds + "...");
+        System.out.println("Waiting for " + seconds + "s...");
         synchronized(this) {
             try {
                 wait(seconds * 1000);
@@ -14,7 +15,6 @@ public class TimeItService {
                 ex.printStackTrace();
                 return;
             }
-            System.out.println("Done !");
         }
     }
 }
