@@ -1,0 +1,39 @@
+services:
+  chatgptapi-service:
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+    build:
+      context: ./
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - .m2:/root/.
+    networks:
+     - spring-network
+  mysqldb:
+    image: mysql:5.7
+    container_name: mysqldb
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: chatgpt
+      MYSQL_ROOT_PASSWORD: 753951
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user_pass
+    healthcheck:
+      test: ["CMD-SHELL", 'mysqladmin ping']
+      interval: 10s
+      timeout: 2s
+      retries: 10
+    ports:
+      - 6033:3306
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+     - spring-network
+volumes:
+  dbdata:
+networks:
+  spring-network:
+    driver: bridge
