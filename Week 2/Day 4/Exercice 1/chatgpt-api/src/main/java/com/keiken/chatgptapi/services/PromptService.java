@@ -25,8 +25,6 @@ public class PromptService {
                 .prompt(prompt.getQuestion())
                 .maxTokens(2048)
                 .echo(true)
-                .user("user")
-                .n(1)
                 .build();
         String text = openAiService.createCompletion(completionRequest).getChoices().get(0).getText();
         String response = text.replace(prompt.getQuestion(), "").trim();
