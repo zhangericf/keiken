@@ -22,9 +22,9 @@ grep -v "daemon" /etc/group
 ### 4. Display localhost information from the /etc/hosts file, display the line number(s) matching the search string and count the number of occurrences of the string.
 
 ```bash
-grep -v "daemon" /etc/group
+grep -n "localhost" /etc/hosts
 ```
-![Alt text](../screenshots/image-2.png)
+![Alt text](../screenshots/10.png)
 
 ### 5. Display a list of /usr/share/doc subdirectories containing information about shells.
 
