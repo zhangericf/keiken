@@ -154,5 +154,7 @@ HTTP/2 maintains backward compatibility with HTTP/1, so older clients and server
 While both HTTP/1 and HTTP/2 can be used over HTTPS for secure communication, the default for HTTP/1 is plaintext HTTP.  
 In HTTP/2, HTTPS is strongly encouraged, improving security and privacy for users.
 
+HTTP/2's improvements are designed to enhance performance and efficiency, particularly for modern web applications that use a large number of resources. It addresses many of the limitations and inefficiencies of HTTP/1, resulting in faster page load times and better user experiences.
+
 <b>BONUS HTTP/3</b>  
 HTTP/3 is also designed to improve web performance by addressing the limitations of HTTP/1. HTTP/2 introduces multiplexing, header compression, and other optimizations, while HTTP/3 goes further by using the QUIC transport protocol to reduce latency and improve reliability.
