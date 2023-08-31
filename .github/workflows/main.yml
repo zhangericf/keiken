@@ -13,7 +13,10 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: mvn --batch-mode --update-snapshots package
+        run: | 
+          ls
+          chmod +x ./mvnw
+          ./mvnw --batch-mode --update-snapshots package
 
   # test-job1:
   #   runs-on: self-hosted
