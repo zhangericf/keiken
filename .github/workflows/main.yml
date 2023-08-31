@@ -8,12 +8,12 @@ jobs:
       - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
         run: ls
       - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: ./mvn clean package
+        run: ./mvnw clean package
 
-  test-job1:
-    runs-on: self-hosted
-    steps:
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: ls
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: docker-compose up -d
+  # test-job1:
+  #   runs-on: self-hosted
+  #   steps:
+  #     - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
+  #       run: ls
+  #     - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
+  #       run: docker-compose up -d
