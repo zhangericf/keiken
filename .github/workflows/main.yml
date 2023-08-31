@@ -6,9 +6,10 @@ jobs:
     runs-on: self-hosted
     steps:
       - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: ls
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: ./mvnw clean package
+        run: |
+          ls
+          chmod +x ./mvnw
+          ./mvnw clean package
 
   # test-job1:
   #   runs-on: self-hosted
