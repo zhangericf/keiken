@@ -10,4 +10,4 @@ jobs:
   test-job1:
     runs-on: self-hosted
     steps:
-      - run: ls "Week 2"/"Day 4"/"Exerice 1"/chatgpt-api
+      - run: ls "Week 2"/"Day 4"/"Exercice 1"/chatgpt-api
