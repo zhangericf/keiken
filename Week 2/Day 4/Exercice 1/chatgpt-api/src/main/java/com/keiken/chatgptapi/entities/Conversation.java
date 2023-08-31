@@ -1,9 +1,11 @@
 package com.keiken.chatgptapi.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDateTime;
 
+@Table(name = "Conversation")
 public class Conversation {
 
     @Id
@@ -20,6 +22,7 @@ public class Conversation {
     public Conversation(String question, String response) {
         this.question = question;
         this.response = response;
+        this.createdAt = LocalDateTime.now();
     }
 
     public void getId(int id) {

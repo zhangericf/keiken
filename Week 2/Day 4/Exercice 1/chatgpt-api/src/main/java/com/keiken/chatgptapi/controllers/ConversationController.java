@@ -21,6 +21,7 @@ public class ConversationController {
         return conversationService.getAllConversations();
     }
 
+    @PostMapping("/conversation")
     public void saveConversation(Conversation conversation) {
         conversationService.saveConversation(conversation);
     }

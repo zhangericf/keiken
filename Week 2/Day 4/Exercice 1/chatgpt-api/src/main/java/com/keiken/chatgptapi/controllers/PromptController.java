@@ -5,6 +5,9 @@ import com.keiken.chatgptapi.entities.Prompt;
 import com.keiken.chatgptapi.services.ConversationService;
 import com.keiken.chatgptapi.services.PromptService;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import okhttp3.Response;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +25,7 @@ public class PromptController {
 
     @PostMapping("/prompts")
     @ApiResponse(description = "Send a prompt to ChatGPT with your OpenAIToken and your question")
-    public String askQuestion(Prompt prompt) {
-        return promptService.askQuestion(prompt);
+    public ResponseEntity askQuestion(Prompt prompt) {
+        return  new ResponseEntity(promptService.askQuestion(prompt), HttpStatus.CREATED);
     }
 }
