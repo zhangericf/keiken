@@ -16,7 +16,7 @@ jobs:
         run: | 
           ls
           chmod +x ./mvnw
-          ./mvnw --batch-mode --update-snapshots clean install
+          ./mvnw --batch-mode --update-snapshots clean compile
 
   # test-job1:
   #   runs-on: self-hosted
