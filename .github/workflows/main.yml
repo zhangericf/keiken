@@ -5,12 +5,15 @@ jobs:
   build-job:
     runs-on: self-hosted
     steps:
-      - uses: maven:latest
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
-        run: |
-          ls
-          chmod +x ./mvnw
-          ./mvnw clean package
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
+        run: mvn --batch-mode --update-snapshots package
 
   # test-job1:
   #   runs-on: self-hosted
