@@ -5,15 +5,15 @@ jobs:
   build-job:
     runs-on: self-hosted
     steps:
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"/
+      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
         run: ls
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"/
+      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
         run: ./mvn clean package
 
   test-job1:
     runs-on: self-hosted
     steps:
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"/
+      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
         run: ls
-      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"/
+      - working-directory: "Week 2/Day 4/Exercice 1/chatgpt-api"
         run: docker-compose up -d
