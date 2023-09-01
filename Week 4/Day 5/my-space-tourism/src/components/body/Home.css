@@ -1,0 +1,22 @@
+.centered-circle {
+    background: white;
+    border-radius: 50%;
+    color: b;
+    width: 274px;
+    height: 274px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-left-auto {
+    margin-left: auto;
+}
+
+body {
+  background: url('../../assets/home/background-home.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

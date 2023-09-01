@@ -1,0 +1,9 @@
+.d-flex {
+    display: flex;
+    gap:20px;
+}
+
+.planet {
+    width: 445px;
+    height: 445px;
+}

@@ -1,0 +1,23 @@
+
+body {
+  margin: 0;
+  font-family: "Bellefair";
+  color: white;
+}
+
+p {
+  color: #D0D6F9;
+  font-size: 20px;
+}
+
+
+h1 {
+  font-size: 70px;
+}
+/* html {
+  background: url('assets/home/background-home.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
