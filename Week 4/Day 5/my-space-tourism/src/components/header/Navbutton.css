@@ -9,7 +9,7 @@ a {
     text-align: center;
 }
 
-a:hover {
+.navbutton:hover {
     border-bottom: 2px solid lightgray;
 }
 

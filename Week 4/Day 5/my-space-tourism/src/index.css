@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: "Bellefair";
   color: white;
+  background-color: #080E1A;
 }
 
 p {
@@ -14,6 +15,7 @@ p {
 h1 {
   font-size: 70px;
 }
+
 /* html {
   background: url('assets/home/background-home.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;

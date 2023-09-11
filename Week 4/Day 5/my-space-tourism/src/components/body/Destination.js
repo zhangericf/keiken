@@ -4,11 +4,17 @@ import { useEffect, useState } from 'react';
 import DoubleColumn from './DoubleColumn';
 import planetInfoFromFile from '../../data/platnetInfos.json';
 import background from '../../assets/destination/background-destination-desktop.jpg';
+import moon from '../../assets/destination/image-moon.png'
+import mars from '../../assets/destination/image-mars.png'
+import europa from '../../assets/destination/image-europa.png'
+import titan from '../../assets/destination/image-titan.png'
 
 export default function Destination() {
     useEffect(() => {
         document.body.style.backgroundImage = `url('${background}')`;
     }, []);
+
+    const pictures = { moon: moon, mars: mars, europa: europa, titan:titan }
     
     const navInfos = [
         { name:"Moon", path:"/destination/moon" },
@@ -19,11 +25,13 @@ export default function Destination() {
 
     const planetInfos = planetInfoFromFile;
 
-    const [active,setActive] = useState("moon")
+    const currentPath = window.location.pathname.replace("/", "").split("/")[1] ? window.location.pathname.replace("/", "").split("/")[1] : "moon";
+    const [active,setActive] = useState(currentPath)
+
     const column1 = 
     <> 
         <h3>01 Pick your destination</h3>
-        <img className='planet' src={planetInfos[active].img} alt='planet' />
+        <img className='planet' src={pictures[active]} alt='planet' />
     </>;
     const column2 = 
     <>
@@ -32,7 +40,7 @@ export default function Destination() {
                 {
                     return <Navbutton key={index} isActive={setActive} active={active} name={info.name} path={info.path} />
                 }
-                )}
+            )}
         </div>
         <h1>{active.toUpperCase()}</h1>
         <p>{planetInfos[active].text}</p>
@@ -50,7 +58,7 @@ export default function Destination() {
 
 
     return (
-        <div>
+        <div >
             <DoubleColumn column1={column1} column2={column2}/>
         </div>
     );

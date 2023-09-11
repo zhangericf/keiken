@@ -4,11 +4,17 @@ import DoubleColumn from './DoubleColumn';
 import crewInfoFromFile from '../../data/crewInfos.json';
 import RoundNavbutton from '../header/RoundNavbutton';
 import background from '../../assets/crew/background-crew-desktop.jpg';
+import douglas from '../../assets/crew/image-douglas-hurley.png'
+import anousheh from '../../assets/crew/image-anousheh-ansari.png'
+import mark from '../../assets/crew/image-mark-shuttleworth.png'
+import victor from '../../assets/crew/image-victor-glover.png'
 
 export default function Crew() {
     useEffect(() => {
         document.body.style.backgroundImage = `url('${background}')`;
     }, []);
+
+    const pictures = { "douglas-hurley": douglas, "mark-shuttleworth": mark, "anousheh-ansari": anousheh, "victor-glover":victor }
 
     const navInfos = [
         { name:"Douglas Hurley", path:"/crew/douglas-hurley" },
@@ -39,7 +45,7 @@ export default function Crew() {
 
     const column2 = 
     <> 
-        <img className='crewPicture' src={crewInfos[active].img} alt='planet' />
+        <img className='crewPicture' src={pictures[active]} alt='planet' />
     </>;
 
     return (

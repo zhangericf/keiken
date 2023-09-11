@@ -18,3 +18,7 @@ a {
     border: 2px solid #FFFFFF;
     border-radius: 50%;
 }
+
+.roundButton:hover {
+    background-color: #ffffff56;
+}
