@@ -16,7 +16,7 @@ To connect with ssh passwordless
 ssh -i ~/.ssh/id_rsa remote_username@remote_address_ip
 ```
 
-![Alt text](image-1.png)
+![Alt text](screenshots/image-1.png)
 
 ### 2. Exercice of changing network interface init scripts : disable DHCP, change the DN, change the domain resolution order, change the IP manually, …
 
